@@ -1,0 +1,718 @@
+cscope 15 $HOME/Code/datastruct/06-Ê†à/03-Ê†àÁöÑÂ∫îÁî®_Â∞±ËøëÂåπÈÖç -q 0000000044 0000003246
+	@linkstack.c
+
+1 
+	~"lök°ack.h
+"
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°dio.h
+>
+
+4 
+	~<°rög.h
+>
+
+7 
+LökSèck
+ *
+	$Inô_LökSèck
+()
+
+9 
+LökSèck
+ *
+°ack
+ = (LökSèck *)
+	`mÆloc
+((LinkStack));
+
+10 
+°ack
+->
+hód
+.
+√xt
+ = 
+NULL
+;
+
+11 
+°ack
+->
+size
+ = 0;
+
+12  
+°ack
+;
+
+13 
+	}
+}
+
+16 
+	$Push_LökSèck
+(
+LökSèck
+ *
+°ack
+, 
+LökNode
+ *
+d©a
+)
+
+18 if(
+°ack
+ =
+NULL
+ || 
+d©a
+ == NULL)
+
+21 
+d©a
+->
+√xt
+ = 
+°ack
+->
+hód
+.next;
+
+22 
+°ack
+->
+hód
+.
+√xt
+ = 
+d©a
+;
+
+23 
+°ack
+->
+size
+++;
+
+24 
+	}
+}
+
+27 *
+	$T›_LökSèck
+(
+LökSèck
+ *
+°ack
+)
+
+29 if(
+°ack
+ =
+NULL
+ || sèck->
+size
+ == 0)
+
+30  
+NULL
+;
+
+32  
+°ack
+->
+hód
+.
+√xt
+;
+
+33 
+	}
+}
+
+36 
+	$P›_LökSèck
+(
+LökSèck
+ *
+°ack
+)
+
+38 if(
+°ack
+ =
+NULL
+ || sèck->
+size
+ == 0)
+
+41 
+°ack
+->
+hód
+.
+√xt
+ = stack->head.next->next;
+
+42 
+°ack
+->
+size
+--;
+
+43 
+	}
+}
+
+46 
+	$IsEm±y
+(
+LökSèck
+ *
+°ack
+)
+
+48 if(
+°ack
+ =
+NULL
+)
+
+51 if(
+°ack
+->
+size
+ == 0)
+
+52  
+LINKSTACK_TRUE
+;
+
+53  
+LINKSTACK_FALSE
+;
+
+54 
+	}
+}
+
+57 
+	$Size_LökSèck
+(
+LökSèck
+ *
+°ack
+)
+
+59 if(
+°ack
+ =
+NULL
+)
+
+62  
+°ack
+->
+size
+;
+
+63 
+	}
+}
+
+66 
+	$CÀ¨_LökSèck
+(
+LökSèck
+ *
+°ack
+)
+
+68 if(
+°ack
+ =
+NULL
+)
+
+71 
+°ack
+->
+hód
+.
+√xt
+ = 
+NULL
+;
+
+72 
+°ack
+->
+size
+ = 0;
+
+73 
+	}
+}
+
+76 
+	$FªeS∑˚_LökSèck
+(
+LökSèck
+ *
+°ack
+)
+
+78 if(
+°ack
+ =
+NULL
+)
+
+81 
+	`‰ì
+(
+°ack
+);
+
+82 
+	}
+}
+
+	@linkstack.h
+
+1 #i‚de‡
+LINKSTACK_H
+
+
+2 
+	#LINKSTACK_H
+
+
+	)
+
+4 
+	#LINKSTACK_TRUE
+ 1
+
+	)
+
+5 
+	#LINKSTACK_FALSE
+ 0
+
+	)
+
+8 
+	sLINKNODE
+{
+
+9 
+LINKNODE
+ *
+	m√xt
+;
+
+10 }
+	tLökNode
+;
+
+12 
+	sLINKSTACK
+{
+
+13 
+LökNode
+ 
+	mhód
+;
+
+14 
+	msize
+;
+
+15 }
+	tLökSèck
+;
+
+18 
+LökSèck
+ *
+Inô_LökSèck
+();
+
+21 
+Push_LökSèck
+(
+LökSèck
+ *
+°ack
+, 
+LökNode
+ *
+d©a
+);
+
+24 *
+T›_LökSèck
+(
+LökSèck
+ *
+°ack
+);
+
+27 
+P›_LökSèck
+(
+LökSèck
+ *
+°ack
+);
+
+30 
+IsEm±y
+(
+LökSèck
+ *
+°ack
+);
+
+33 
+Size_LökSèck
+(
+LökSèck
+ *
+°ack
+);
+
+36 
+CÀ¨_LökSèck
+(
+LökSèck
+ *
+°ack
+);
+
+39 
+FªeS∑˚_LökSèck
+(
+LökSèck
+ *
+°ack
+);
+
+	@main.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~"lök°ack.h
+"
+
+6 
+	sMYCHAR
+{
+
+7 
+LökNode
+ 
+	mnode
+;
+
+8 
+	mödex
+;
+
+9 
+	mch¨a˘î
+;
+
+10 }
+	tMyCh¨
+;
+
+12 
+	$IsLe·
+(
+c
+)
+
+14  
+c
+ == '(';
+
+15 
+	}
+}
+
+17 
+	$IsRight
+(
+c
+)
+
+19  
+c
+ == ')';
+
+20 
+	}
+}
+
+22 
+	$ShowEº‹
+(*
+°r
+, 
+pos
+)
+
+24 
+	`¥ötf
+("Âá∫Áé∞Ê≤°ÊúâÂåπÈÖçÁöÑÊã¨Âè∑\n");
+
+25 
+	`¥ötf
+("%s\n", 
+°r
+);
+
+26 
+i
+=0; i < 
+pos
+; i++)
+
+28 
+	`¥ötf
+(" ");
+
+30 
+	`¥ötf
+("|\n");
+
+31 
+	}
+}
+
+33 
+MyCh¨
+ *
+	$Cª©eMyCh¨
+(
+p
+, 
+ödex
+)
+
+35 
+MyCh¨
+ *
+mych¨
+ = (MyCh¨ *)
+	`mÆloc
+((MyChar));
+
+36 
+mych¨
+->
+ch¨a˘î
+ = 
+p
+;
+
+37 
+mych¨
+->
+ödex
+ = index;
+
+38  
+mych¨
+;
+
+39 
+	}
+}
+
+41 
+	$maö
+()
+
+45 *
+°r
+ = "(((((";
+
+49 
+LökSèck
+ *
+°ack
+ = 
+	`Inô_LökSèck
+();
+
+51 *
+p
+ = 
+°r
+;
+
+52 
+ödex
+ = 0;
+
+53 *
+p
+ != '\0')
+
+56 if(
+	`IsLe·
+(*
+p
+))
+
+58 
+	`Push_LökSèck
+(
+°ack
+, (
+LökNode
+ *)
+	`Cª©eMyCh¨
+(*
+p
+, 
+ödex
+));
+
+62 if(
+	`IsRight
+(*
+p
+))
+
+64 if(
+	`Size_LökSèck
+(
+°ack
+) > 0)
+
+66 
+MyCh¨
+ *
+c
+ = (MyCh¨ *)
+	`T›_LökSèck
+(
+°ack
+);
+
+67 
+	`P›_LökSèck
+(
+°ack
+);
+
+68 
+	`‰ì
+(
+c
+);
+
+72 
+	`ShowEº‹
+(
+°r
+, 
+ödex
+);
+
+76 
+p
+++;
+
+77 
+ödex
+++;
+
+79 
+	`¥ötf
+("\n");
+
+81 
+	`Size_LökSèck
+(
+°ack
+) > 0)
+
+83 
+MyCh¨
+ *
+c
+ = (MyCh¨ *)
+	`T›_LökSèck
+(
+°ack
+);
+
+84 
+	`ShowEº‹
+(
+°r
+, 
+c
+->
+ödex
+);
+
+85 
+	`P›_LökSèck
+(
+°ack
+);
+
+86 
+	`‰ì
+(
+c
+);
+
+89 
+	`¥ötf
+("\n");
+
+90 
+	`FªeS∑˚_LökSèck
+(
+°ack
+);
+
+93 
+	}
+}
+
+	@
+1
+.
+0
+3
+31
+linkstack.c
+linkstack.h
+main.c
