@@ -1,0 +1,1068 @@
+cscope 15 $HOME/Code/datastruct/04-å¾ªçŽ¯é“¾è¡¨ -q 0000000058 0000005488
+	@CircleLinkList.c
+
+1 
+	~"CœþeLškLi¡.h
+"
+
+2 
+	~<¡dio.h
+>
+
+3 
+	~<¡dlib.h
+>
+
+6 
+CœþeLškLi¡
+ *
+	$In™_CœþeLškLi¡
+()
+
+8 
+CœþeLškLi¡
+ *
+þi¡
+ = (CœþeLškLi¡*)
+	`m®loc
+((CircleLinkList));
+
+9 
+þi¡
+->
+h—d
+.
+Ãxt
+ = &(clist->head);
+
+10 
+þi¡
+->
+size
+ = 0;
+
+11  
+þi¡
+;
+
+12 
+	}
+}
+
+15 
+	$In£¹_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+pos
+, 
+CœþeLškNode
+ *
+d©a
+)
+
+17 if(
+þi¡
+ =ð
+NULL
+ || 
+d©a
+ == NULL)
+
+20 if(
+pos
+ < 0 ||…o > 
+þi¡
+->
+size
+)
+
+21 
+pos
+ = 
+þi¡
+->
+size
+;
+
+24 
+CœþeLškNode
+ *
+pCu¼’t
+ = &(
+þi¡
+->
+h—d
+);
+
+25 
+i
+ = 0; i < 
+pos
+; i++)
+
+27 
+pCu¼’t
+ =…Cu¼’t->
+Ãxt
+;
+
+30 
+d©a
+->
+Ãxt
+ = 
+pCu¼’t
+->next;
+
+31 
+pCu¼’t
+->
+Ãxt
+ = 
+d©a
+;
+
+33 
+þi¡
+->
+size
+++;
+
+34 
+	}
+}
+
+37 
+CœþeLškNode
+ *
+	$FrÚt_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+)
+
+39  
+þi¡
+->
+h—d
+.
+Ãxt
+;
+
+40 
+	}
+}
+
+43 
+	$RemoveByPos_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+pos
+)
+
+45 if(
+þi¡
+ =ð
+NULL
+)
+
+48 if(
+pos
+ < 0 ||…o >ð
+þi¡
+->
+size
+)
+
+51 
+CœþeLškNode
+ *
+pCu¼’t
+ = &(
+þi¡
+->
+h—d
+);
+
+52 
+i
+ = 0; i < 
+pos
+; i++)
+
+54 
+pCu¼’t
+ =…Cu¼’t->
+Ãxt
+;
+
+57 
+pCu¼’t
+->
+Ãxt
+ =…Current->next->next;
+
+58 
+þi¡
+->
+size
+--;
+
+59 
+	}
+}
+
+62 
+	$RemoveByV®ue_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+CœþeLškNode
+ *
+d©a
+, 
+COMPARENODE
+ 
+com·»
+)
+
+64 if(
+þi¡
+ =ð
+NULL
+ || 
+d©a
+ == NULL)
+
+67 
+CœþeLškNode
+ *
+pP»v
+ = &(
+þi¡
+->
+h—d
+);
+
+68 
+CœþeLškNode
+ *
+pCu¼’t
+ = 
+pP»v
+->
+Ãxt
+;
+
+69 
+i
+=0; i < 
+þi¡
+->
+size
+; i++)
+
+71 if(
+	`com·»
+(
+pCu¼’t
+, 
+d©a
+è=ð
+CIRCLELINKLIST_TRUE
+)
+
+73 
+pP»v
+->
+Ãxt
+ = 
+pCu¼’t
+->next;
+
+74 
+	`´štf
+("in\n");
+
+77 
+pP»v
+ = 
+pCu¼’t
+;
+
+78 
+pCu¼’t
+ =…Cu¼’t->
+Ãxt
+;
+
+80 
+	}
+}
+
+83 
+	$Size_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+)
+
+85  
+þi¡
+->
+size
+;
+
+86 
+	}
+}
+
+89 
+	$IsEm±y_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+)
+
+91 if(
+þi¡
+->
+size
+ == 0)
+
+92  
+CIRCLELINKLIST_TRUE
+;
+
+94  
+CIRCLELINKLIST_FALSE
+;
+
+95 
+	}
+}
+
+98 
+	$Fšd_CœþeLškLi¡
+(
+CœþeLškLi¡
+* 
+þi¡
+, 
+CœþeLškNode
+ *
+d©a
+, 
+COMPARENODE
+ 
+com·»
+)
+
+100 if(
+þi¡
+ =ð
+NULL
+ || 
+d©a
+ == NULL)
+
+103 
+CœþeLškNode
+ *
+pCu¼’t
+ = 
+þi¡
+->
+h—d
+.
+Ãxt
+;
+
+104 
+æag
+ = -1;
+
+105 
+i
+=0; i < 
+þi¡
+->
+size
+; i++)
+
+107 if(
+	`com·»
+(
+pCu¼’t
+, 
+d©a
+è=ð
+CIRCLELINKLIST_TRUE
+)
+
+109 
+æag
+ = 
+i
+;
+
+112 
+pCu¼’t
+ =…Cu¼’t->
+Ãxt
+;
+
+114  
+æag
+;
+
+115 
+	}
+}
+
+118 
+	$Pršt_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+PRINTNODE
+ 
+´št
+)
+
+120 if(
+þi¡
+ =ð
+NULL
+)
+
+123 
+CœþeLškNode
+ *
+pCu¼’t
+ = 
+þi¡
+->
+h—d
+.
+Ãxt
+;
+
+124 
+i
+=0; i < 
+þi¡
+->
+size
+; i++)
+
+126 
+	`´št
+(
+pCu¼’t
+);
+
+127 
+pCu¼’t
+ =…Cu¼’t->
+Ãxt
+;
+
+129 
+	}
+}
+
+132 
+	$F»eS·û_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+)
+
+134 if(
+þi¡
+ =ð
+NULL
+)
+
+136 
+	`ä“
+(
+þi¡
+);
+
+137 
+	}
+}
+
+	@CircleLinkList.h
+
+1 #iâdeà
+CIRCLELINKLIST_H
+
+
+2 
+	#CIRCLELINKLIST_H
+
+
+	)
+
+5 
+	sCIRCLELINKLISTNODE
+{
+
+6 
+CIRCLELINKLISTNODE
+ *
+	mÃxt
+;
+
+7 }
+	tCœþeLškNode
+;
+
+10 
+	sCIRCLELINKLIST
+{
+
+11 
+CœþeLškNode
+ 
+	mh—d
+;
+
+12 
+	msize
+;
+
+13 }
+	tCœþeLškLi¡
+;
+
+15 
+	#CIRCLELINKLIST_TRUE
+ 1
+
+	)
+
+16 
+	#CIRCLELINKLIST_FALSE
+ 0
+
+	)
+
+19 (*
+	tCOMPARENODE
+)(
+	tCœþeLškNode
+ *, CircleLinkNode *);
+
+22 (*
+	tPRINTNODE
+)(
+	tCœþeLškNode
+ *);
+
+25 
+CœþeLškLi¡
+ *
+	`In™_CœþeLškLi¡
+();
+
+28 
+	`In£¹_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+pos
+, 
+CœþeLškNode
+ *
+d©a
+);
+
+31 
+CœþeLškNode
+ *
+	`FrÚt_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+);
+
+34 
+	`RemoveByPos_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+pos
+);
+
+37 
+	`RemoveByV®ue_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+CœþeLškNode
+ *
+d©a
+, 
+COMPARENODE
+ 
+com·»
+);
+
+40 
+	`Size_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+);
+
+43 
+	`IsEm±y_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+);
+
+46 
+	`Fšd_CœþeLškLi¡
+(
+CœþeLškLi¡
+* 
+þi¡
+, 
+CœþeLškNode
+ *
+d©a
+, 
+COMPARENODE
+ 
+com·»
+);
+
+49 
+	`Pršt_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+, 
+PRINTNODE
+ 
+´št
+);
+
+52 
+	`F»eS·û_CœþeLškLi¡
+(
+CœþeLškLi¡
+ *
+þi¡
+);
+
+	@main.c
+
+1 
+	~"CœþeLškLi¡.h
+"
+
+2 
+	~<¡dio.h
+>
+
+3 
+	~<¡dlib.h
+>
+
+4 
+	~<¡ršg.h
+>
+
+6 
+	sPERSON
+{
+
+7 
+CœþeLškNode
+ 
+	mnode
+;
+
+8 
+	mÇme
+[64];
+
+9 
+	mage
+;
+
+10 }
+	tP”sÚ
+;
+
+12 
+	$MyPršt
+(
+CœþeLškNode
+* 
+d©a
+)
+
+14 
+P”sÚ
+ *
+p
+ = (P”sÚ *)
+d©a
+;
+
+15 
+	`´štf
+("Name: %s, Age: %d\n", 
+p
+->
+Çme
+,…->
+age
+);
+
+16 
+	}
+}
+
+18 
+	$MyCom·»
+(
+CœþeLškNode
+ *
+d©a1
+ , CœþeLškNod*
+d©a2
+)
+
+20 
+P”sÚ
+ *
+p1
+ = (P”sÚ *)
+d©a1
+;
+
+21 
+P”sÚ
+ *
+p2
+ = (P”sÚ *)
+d©a2
+;
+
+23 if(
+	`¡rcmp
+(
+p1
+->
+Çme
+, 
+p2
+->Çmeè&&…1->
+age
+ ==…2->age)
+
+24  
+CIRCLELINKLIST_TRUE
+;
+
+26  
+CIRCLELINKLIST_FALSE
+;
+
+27 
+	}
+}
+
+29 
+	$maš
+()
+
+33 
+CœþeLškLi¡
+ *
+þi¡
+ = 
+	`In™_CœþeLškLi¡
+();
+
+36 
+P”sÚ
+ 
+p1
+, 
+p2
+, 
+p3
+, 
+p4
+, 
+p5
+;
+
+37 
+	`¡rýy
+(
+p1
+.
+Çme
+, "aaa");
+
+38 
+	`¡rýy
+(
+p2
+.
+Çme
+, "bbb");
+
+39 
+	`¡rýy
+(
+p3
+.
+Çme
+, "ccc");
+
+40 
+	`¡rýy
+(
+p4
+.
+Çme
+, "ddd");
+
+41 
+	`¡rýy
+(
+p5
+.
+Çme
+, "eee");
+
+42 
+p1
+.
+age
+ = 10;
+
+43 
+p2
+.
+age
+ = 20;
+
+44 
+p3
+.
+age
+ = 30;
+
+45 
+p4
+.
+age
+ = 40;
+
+46 
+p5
+.
+age
+ = 50;
+
+49 if(
+	`IsEm±y_CœþeLškLi¡
+(
+þi¡
+è=ð
+CIRCLELINKLIST_TRUE
+)
+
+51 
+	`´štf
+("circle†ink†ist isƒmpty\n");
+
+56 
+	`In£¹_CœþeLškLi¡
+(
+þi¡
+, 0, (
+CœþeLškNode
+*)&
+p1
+);
+
+57 
+	`In£¹_CœþeLškLi¡
+(
+þi¡
+, 0, (
+CœþeLškNode
+*)&
+p2
+);
+
+58 
+	`In£¹_CœþeLškLi¡
+(
+þi¡
+, 0, (
+CœþeLškNode
+*)&
+p3
+);
+
+59 
+	`In£¹_CœþeLškLi¡
+(
+þi¡
+, 0, (
+CœþeLškNode
+*)&
+p4
+);
+
+60 
+	`In£¹_CœþeLškLi¡
+(
+þi¡
+, 0, (
+CœþeLškNode
+*)&
+p5
+);
+
+63 if(
+	`IsEm±y_CœþeLškLi¡
+(
+þi¡
+è=ð
+CIRCLELINKLIST_TRUE
+)
+
+65 
+	`´štf
+("circle†ink†ist isƒmpty\n");
+
+67 if(
+	`IsEm±y_CœþeLškLi¡
+(
+þi¡
+è=ð
+CIRCLELINKLIST_FALSE
+)
+
+69 
+	`´štf
+("circle†ink†ist is‚otƒmpty\n");
+
+71 
+	`´štf
+("þi¡ siz: %d\n", 
+þi¡
+->
+size
+);
+
+74 
+	`Pršt_CœþeLškLi¡
+(
+þi¡
+, 
+MyPršt
+);
+
+77 
+P”sÚ
+ 
+pD–
+;
+
+78 
+	`¡rýy
+(
+pD–
+.
+Çme
+, "ddd");
+
+79 
+pD–
+.
+age
+ = 40;
+
+80 
+	`RemoveByV®ue_CœþeLškLi¡
+(
+þi¡
+, (
+CœþeLškNode
+ *)&
+pD–
+, 
+MyCom·»
+);
+
+82 
+	`´štf
+("---------\n");
+
+84 
+	`Pršt_CœþeLškLi¡
+(
+þi¡
+, 
+MyPršt
+);
+
+87 
+	`F»eS·û_CœþeLškLi¡
+(
+þi¡
+);
+
+90 
+	}
+}
+
+	@
+1
+.
+0
+3
+41
+CircleLinkList.c
+CircleLinkList.h
+main.c
