@@ -1,0 +1,852 @@
+cscope 15 $HOME/Code/datastruct/02-‰ºÅ‰∏öÈìæË°®/‰ºÅ‰∏öÈìæË°® -q 0000000053 0000003813
+	@LinkList.c
+
+1 
+	~<°dlib.h
+>
+
+2 
+	~"LökLi°.h
+"
+
+4 
+LökLi°
+ * 
+	$Inô_LökLi°
+()
+
+6 
+LökLi°
+* 
+li°
+ = (LökLi°*)
+	`mÆloc
+((LinkList));
+
+7 
+li°
+->
+hód
+.
+√xt
+ = 
+NULL
+;
+
+8 
+li°
+->
+size
+ = 0;
+
+9  
+li°
+;
+
+10 
+	}
+}
+
+12 
+	$In£π_LökLi°
+(
+LökLi°
+ * 
+li°
+, 
+pos
+, 
+LökNode
+ * 
+d©a
+)
+
+14 i‡(
+li°
+ =
+NULL
+)
+
+16 i‡(
+d©a
+ =
+NULL
+)
+
+19 i‡(
+pos
+ < 0 ||Öo†> 
+li°
+->
+size
+)
+
+20 
+pos
+ = 
+li°
+->
+size
+;
+
+23 
+LökNode
+* 
+pCuºít
+ = &(
+li°
+->
+hód
+);
+
+24 
+i
+ = 0; i < 
+pos
+; i++)
+
+25 
+pCuºít
+ =ÖCuºít->
+√xt
+;
+
+28 
+d©a
+->
+√xt
+ = 
+pCuºít
+->next;
+
+29 
+pCuºít
+->
+√xt
+ = 
+d©a
+;
+
+31 
+li°
+->
+size
+++;
+
+32 
+	}
+}
+
+34 
+	$Remove_LökLi°
+(
+LökLi°
+ *
+li°
+, 
+pos
+)
+
+36 i‡(
+li°
+ =
+NULL
+)
+
+39 i‡(
+pos
+ < 0 ||Öo†>
+li°
+->
+size
+)
+
+42 
+LökNode
+ *
+pCuºít
+ = &(
+li°
+->
+hód
+);
+
+43 
+i
+ = 0; i < 
+pos
+; i++)
+
+45 
+pCuºít
+ =ÖCuºít->
+√xt
+;
+
+48 
+pCuºít
+->
+√xt
+ =ÖCurrent->next->next;
+
+49 
+li°
+->
+size
+--;
+
+50 
+	}
+}
+
+52 
+	$Föd_LökLi°
+(
+LökLi°
+* 
+li°
+, 
+LökNode
+* 
+d©a
+, 
+COMPARENODE
+ 
+com∑ª
+)
+
+54 i‡(
+li°
+ =
+NULL
+)
+
+57 i‡(
+d©a
+ =
+NULL
+)
+
+60 
+LökNode
+ *
+pCuºít
+ = 
+li°
+->
+hód
+.
+√xt
+;
+
+61 
+ödex
+ = 0;
+
+62 
+Êag
+ = -1;
+
+63 
+pCuºít
+ !
+NULL
+)
+
+65 if(
+	`com∑ª
+(
+pCuºít
+, 
+d©a
+) == 0)
+
+67 
+Êag
+ = 
+ödex
+;
+
+70 
+pCuºít
+ =ÖCuºít->
+√xt
+;
+
+71 
+ödex
+++;
+
+74  
+Êag
+;
+
+75 
+	}
+}
+
+77 
+	$GëSize_LökLi°
+(
+LökLi°
+ * 
+li°
+)
+
+80 
+	}
+}
+
+82 
+	$Pröt_LökLi°
+(
+LökLi°
+ * 
+li°
+, 
+PRINTNODE
+ 
+¥öt
+)
+
+84 i‡(
+li°
+ =
+NULL
+)
+
+87 
+LökNode
+* 
+pCuºít
+ = 
+li°
+->
+hód
+.
+√xt
+;
+
+88 
+i
+ = 0; i < 
+li°
+->
+size
+; i++)
+
+90 
+	`¥öt
+(
+pCuºít
+);
+
+91 
+pCuºít
+ =ÖCuºít->
+√xt
+;
+
+93 
+	}
+}
+
+95 
+	$FªeS∑˚_LökLi°
+(
+LökLi°
+ * 
+li°
+)
+
+97 i‡(
+li°
+ =
+NULL
+)
+
+100 
+	`‰ì
+(
+li°
+);
+
+101 
+	}
+}
+
+	@LinkList.h
+
+1 #¥agm®
+⁄˚
+
+
+3 
+	~<°dlib.h
+>
+
+4 
+	~<°dio.h
+>
+
+7 
+	sLINKNODE
+
+
+9 
+LINKNODE
+* 
+	m√xt
+;
+
+10 }
+	tLökNode
+;
+
+13 
+	sLINKLIST
+
+
+15 
+LökNode
+ 
+	mhód
+;
+
+16 
+	msize
+;
+
+17 }
+	tLökLi°
+;
+
+20 (*
+	tPRINTNODE
+)(
+	tLökNode
+*);
+
+23 (*
+	tCOMPARENODE
+)(
+	tLökNode
+*, LinkNode*);
+
+26 
+LökLi°
+* 
+	`Inô_LökLi°
+();
+
+29 
+	`In£π_LökLi°
+(
+LökLi°
+* 
+li°
+, 
+pos
+, 
+LökNode
+* 
+d©a
+);
+
+32 
+	`Remove_LökLi°
+(
+LökLi°
+* 
+li°
+, 
+pos
+);
+
+35 
+	`Föd_LökLi°
+(
+LökLi°
+* 
+li°
+, 
+LökNode
+* 
+d©a
+, 
+COMPARENODE
+ 
+com∑ª
+);
+
+38 
+	`GëSize_LökLi°
+(
+LökLi°
+* 
+li°
+);
+
+41 
+	`Pröt_LökLi°
+(
+LökLi°
+* 
+li°
+, 
+PRINTNODE
+ 
+¥öt
+);
+
+44 
+	`FªeS∑˚_LökLi°
+(
+LökLi°
+* 
+li°
+);
+
+	@main.cpp
+
+1 
+	~"LökLi°.h
+"
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°dio.h
+>
+
+4 
+	~<°rög.h
+>
+
+7 
+	sPERSON
+ {
+
+8 
+LökNode
+ 
+	mnode
+;
+
+9 
+	m«me
+[64];
+
+10 
+	mage
+;
+
+11 }
+	tPîs⁄
+;
+
+13 
+	$MyPröt
+(
+LökNode
+* 
+d©a
+)
+
+15 
+Pîs⁄
+* 
+p
+ = (Pîs⁄*)
+d©a
+;
+
+16 
+	`¥ötf
+("Name:%s, Age:%d \n", 
+p
+->
+«me
+,Ö->
+age
+);
+
+17 
+	}
+}
+
+19 
+	$MyCom∑ª
+(
+LökNode
+* 
+node1
+, LökNode* 
+node2
+)
+
+21 
+Pîs⁄
+ *
+p1
+ = (Pîs⁄*)
+node1
+;
+
+22 
+Pîs⁄
+ *
+p2
+ = (Pîs⁄*)
+node2
+;
+
+24 if(
+	`°rcmp
+(
+p1
+->
+«me
+, 
+p2
+->«meË=0 &&Ö1->
+age
+ ==Ö2->age)
+
+29 
+	}
+}
+
+32 
+	$maö
+()
+
+34 
+LökLi°
+* 
+li°
+ = 
+	`Inô_LökLi°
+();
+
+36 
+Pîs⁄
+ 
+p1
+, 
+p2
+, 
+p3
+, 
+p4
+, 
+p5
+;
+
+37 
+	`°r˝y
+(
+p1
+.
+«me
+, "aaa");
+
+38 
+	`°r˝y
+(
+p2
+.
+«me
+, "bbb");
+
+39 
+	`°r˝y
+(
+p3
+.
+«me
+, "ccc");
+
+40 
+	`°r˝y
+(
+p4
+.
+«me
+, "ddd");
+
+41 
+	`°r˝y
+(
+p5
+.
+«me
+, "eee");
+
+42 
+p1
+.
+age
+ = 19;
+
+43 
+p2
+.
+age
+ = 21;
+
+44 
+p3
+.
+age
+ = 18;
+
+45 
+p4
+.
+age
+ = 20;
+
+46 
+p5
+.
+age
+ = 22;
+
+49 
+	`In£π_LökLi°
+(
+li°
+, 0, (
+LökNode
+*)&
+p1
+);
+
+50 
+	`In£π_LökLi°
+(
+li°
+, 0, (
+LökNode
+*)&
+p2
+);
+
+51 
+	`In£π_LökLi°
+(
+li°
+, 0, (
+LökNode
+*)&
+p3
+);
+
+52 
+	`In£π_LökLi°
+(
+li°
+, 0, (
+LökNode
+*)&
+p4
+);
+
+53 
+	`In£π_LökLi°
+(
+li°
+, 0, (
+LökNode
+*)&
+p5
+);
+
+56 
+	`Pröt_LökLi°
+(
+li°
+, 
+MyPröt
+);
+
+59 
+	`Remove_LökLi°
+(
+li°
+, 3);
+
+62 
+	`¥ötf
+("\n");
+
+63 
+	`Pröt_LökLi°
+(
+li°
+, 
+MyPröt
+);
+
+66 
+Pîs⁄
+ 
+födP
+;
+
+67 
+	`°r˝y
+(
+födP
+.
+«me
+, "ccc");
+
+68 
+födP
+.
+age
+ = 18;
+
+69 
+pos
+ = 
+	`Föd_LökLi°
+(
+li°
+, (
+LökNode
+*)&
+födP
+, 
+MyCom∑ª
+);
+
+70 
+	`¥ötf
+("posôi⁄:%d", 
+pos
+);
+
+73 
+	`FªeS∑˚_LökLi°
+(
+li°
+);
+
+76 
+	}
+}
+
+	@
+1
+.
+0
+3
+31
+LinkList.c
+LinkList.h
+main.cpp
